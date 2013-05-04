@@ -6,8 +6,7 @@ created to encourage and REWARD the creation of animated gifs.
 
 HUH? DONT QUesTION IT!!!!!!!
 
-LOLOLOLOL ARE YOU READY TO MAKE SOME GIFS AND WAIT FOR THE NEXT PUMPnDUMP
-TO CASH IN ON YOUR ARTISTIC EFFORTS CREATING FANTASTIC gifs FOR ALL TO SEE?
+***GIFCOIN 2013***
 
   _______   __     _______   ______    ______    __    _____  ___   
  /" _   "| |" \   /"     "| /" _  "\  /    " \  |" \  (\"   \|"  \  
