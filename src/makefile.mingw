@@ -68,7 +68,7 @@ OBJS= \
     obj/noui.o
 
 
-all: gifcoin.exe
+all: gifcoind.exe
 
 obj/scrypt.o: scrypt.c
 	gcc -c $(CFLAGS) -o $@ $^
@@ -76,7 +76,7 @@ obj/scrypt.o: scrypt.c
 obj/%.o: %.cpp $(HEADERS)
 	g++ -c $(CFLAGS) -o $@ $<
 
-gifcoin.exe: $(OBJS:obj/%=obj/%)
+gifcoind.exe: $(OBJS:obj/%=obj/%)
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ $(LIBS)
 
 TESTOBJS := $(patsubst test/%.cpp,obj-test/%.o,$(wildcard test/*.cpp))
@@ -88,7 +88,7 @@ test_gifcoin.exe: $(TESTOBJS) $(filter-out obj/init.o,$(OBJS:obj/%=obj/%))
 	g++ $(CFLAGS) -o $@ $(LIBPATHS) $^ -lboost_unit_test_framework $(LIBS)
 
 clean:
-	-del /Q gifcoin test_gifcoin
+	-del /Q gifcoind test_gifcoin
 	-del /Q obj\*
 	-del /Q obj-test\*
 	-del /Q build.h
