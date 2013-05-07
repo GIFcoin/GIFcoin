@@ -137,10 +137,10 @@ bool AppInit(int argc, char* argv[])
             // First part of help message is specific to GIFcoin server / RPC client
             std::string strUsage = _("GIFcoin version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
-                  "  gifcoin [options]                     " + "\n" +
-                  "  gifcoin [options] <command> [params]  " + _("Send command to -server or gifcoin") + "\n" +
-                  "  gifcoin [options] help                " + _("List commands") + "\n" +
-                  "  gifcoin [options] help <command>      " + _("Get help for a command") + "\n";
+                  "  gifcoind [options]                     " + "\n" +
+                  "  gifcoind [options] <command> [params]  " + _("Send command to -server or gifcoind") + "\n" +
+                  "  gifcoind [options] help                " + _("List commands") + "\n" +
+                  "  gifcoind [options] help <command>      " + _("Get help for a command") + "\n";
 
             strUsage += "\n" + HelpMessage();
 
@@ -176,7 +176,7 @@ int main(int argc, char* argv[])
 {
     bool fRet = false;
 
-    // Connect signal handlers
+    // Connect gifcoind signal handlers
     noui_connect();
 
     fRet = AppInit(argc, argv);
@@ -218,7 +218,7 @@ std::string HelpMessage()
 {
     string strUsage = _("Options:") + "\n" +
         "  -conf=<file>           " + _("Specify configuration file (default: gifcoin.conf)") + "\n" +
-        "  -pid=<file>            " + _("Specify pid file (default: gifcoin.pid)") + "\n" +
+        "  -pid=<file>            " + _("Specify pid file (default: gifcoind.pid)") + "\n" +
         "  -gen                   " + _("Generate coins") + "\n" +
         "  -gen=0                 " + _("Don't generate coins") + "\n" +
         "  -datadir=<dir>         " + _("Specify data directory") + "\n" +
@@ -769,4 +769,3 @@ bool AppInit2()
 
     return true;
 }
-
